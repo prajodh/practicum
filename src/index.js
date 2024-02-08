@@ -12,7 +12,7 @@ app.get('/add/:n/:m', (req, res) => {
     console.log(req.params.n, req.params.m)
     res.json(Number(req.params.n) + Number(req.params.m));
   });
-//hello world 1 m
+//hello world
 app.listen(port, () => {
     console.log(`Arithmetic service running at http://localhost:${port}`);
 });
