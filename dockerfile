@@ -1,6 +1,6 @@
-FROM node:20.11.0-alpine
+FROM node:latest
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm ci --omit=dev
 COPY ./src ./src
-CMD npm start
+CMD node src/index.js

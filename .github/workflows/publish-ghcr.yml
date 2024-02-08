@@ -9,7 +9,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - name: Build and push the image
-              run: |
+              run:
                 docker login --username prajodhpragath --password ${{secrets.ART}} ghcr.io
                 docker build -t ghcr.io/prajodh/arithmetic-service:latest --file dockerfile .
                 docker push ghcr.io/prajodh/arithmetic-service:latest
