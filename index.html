@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Sum Calculator</title>
+    <script>
+    async function calculateSum() {
+        let num1 = document.getElementById('quantity1').value;
+        let num2 = document.getElementById('quantity2').value;
+        const response = await fetch("http://localhost:3000/add/"+num1+"/"+num2)
+        const sum = await response.json();
+        document.getElementById('sum').innerHTML = sum;
+        
+    }
+    </script>
+</head>
+<body>
+
+<h2>Arithmetic</h2>
+
+<label for="quantity"> Arithimetic </label> <br> <br>
+    <input type="number" id="quantity1" name="quantity" >
+    <label for="quantity"> + </label>
+    <input type="number" id="quantity2" name="quantity" >
+    <button type="button" onclick="calculateSum()" > = </button>
+    <p id="sum"></p>
+
+</body>
+</html>
