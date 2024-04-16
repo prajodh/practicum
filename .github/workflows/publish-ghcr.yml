@@ -14,14 +14,14 @@ jobs:
               run : npm test
             - name: Build and push the image
               run: |
-                docker login --username prajodhpragath --password ${{secrets.ART}} ghcr.io
+                docker login --username prajodhpragath --password-stdin ${{secrets.ART}} ghcr.io
                 docker build -t ghcr.io/prajodh/arithmetic-service:latest --file dockerfile .
                 docker push ghcr.io/prajodh/arithmetic-service:latest
             - name: Publish Image to azure container registry
               run: |
-                docker login --username prajodhpragath --password ${{secrets.AZURE_CONTAINER_REGISTRY}} practicumss15.azurecr.io 
-                docker build -t ghcr.io/prajodh/arithmetic-service:latest practicumss15.azurecr.io/arithmetic-service:latest
-                docker push practicumss15.azurecr.io/arithmetic-service:lates
+                docker login --username prajodhpragath --password-stdin ${{secrets.AZURE_CONTAINER_REGISTRY}} practicums15.azurecr.io 
+                docker build -t ghcr.io/prajodh/arithmetic-service:latest practicums15.azurecr.io/arithmetic-service:latest
+                docker push practicums15.azurecr.io/arithmetic-service:lates
 
 
 
