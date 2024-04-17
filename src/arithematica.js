@@ -17,5 +17,5 @@ function mul(m,n){
 function div(m,n){
     return m/n
 }
-
+//hel
 module.exports = {add,sub,mul,div}
