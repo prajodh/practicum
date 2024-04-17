@@ -8,7 +8,7 @@ function sub(m,n){
     return m-n
 }
 
-
+//
 function mul(m,n){
     return n*m
 }
