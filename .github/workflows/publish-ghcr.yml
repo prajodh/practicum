@@ -21,7 +21,7 @@ jobs:
               run: |
                 docker login --username prajodhpragath --password ${{secrets.AZURE_CONTAINER_REGISTRY}} practicums15.azurecr.io 
                 docker build -t ghcr.io/prajodh/arithmetic-service:latest practicums15.azurecr.io/arithmetic-service:latest
-                docker push practicums15.azurecr.io/arithmetic-service:lates
+                docker push practicums15.azurecr.io/arithmetic-service:latest
 
 
 
