@@ -19,7 +19,7 @@ jobs:
                 docker push ghcr.io/prajodh/arithmetic-service:latest
             - name: Publish Image to azure container registry
               run: |
-                docker login --username prajodhpragath --password ${{secrets.ART_1}} practicums15.azurecr.io 
+                docker login --username prajodhpragath --password ${{secrets.AZURE_CONTAINER}} practicums15.azurecr.io 
                 docker build -t ghcr.io/prajodh/arithmetic-service:latest practicums15.azurecr.io/arithmetic-service:latest
                 docker push practicums15.azurecr.io/arithmetic-service:lates
 
